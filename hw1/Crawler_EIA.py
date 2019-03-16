@@ -6,7 +6,7 @@ import datetime
 
 file = "psw01.xls"
 
-# Determine if the file exists to avoid repeated downloads.
+# Check if the file exists to avoid repeated downloads.
 
 if os.path.isfile(file) == False:
     # Determine download directory.
