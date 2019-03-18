@@ -28,9 +28,9 @@
 
 - 部分內容使用`Selenium.click()`下載 `csv` 檔。已將相關檔案一併附在 hw1 資料夾內，為了方便執行，便將部分下載指令屏蔽，直接開啟本地端檔案。若要實作真實運行狀況，請將相關隱藏程式碼開啟，並從環境變數中將下載路徑改為當前執行資料夾以方便讀檔。
 
-  ![1552922371830](C:\Users\yo930\AppData\Roaming\Typora\typora-user-images\1552922371830.png)
+  ![1552922371830](.\1552922371830.png)
 
-  ![1552922418904](C:\Users\yo930\AppData\Roaming\Typora\typora-user-images\1552922418904.png)
+  ![1552922418904](.\1552922418904.png)
 
 ## part 2. 原油庫存指標
 
@@ -39,4 +39,4 @@
 - 從 <https://www.eia.gov/petroleum/supply/weekly/> 取得相關資料
 - 與 part 1. 相同，已於資料夾內附上相關 `csv` 檔。
 
-![1552921008969](C:\Users\yo930\AppData\Roaming\Typora\typora-user-images\1552921008969.png)
+![1552921008969](.\1552921008969.png)
