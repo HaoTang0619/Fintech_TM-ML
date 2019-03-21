@@ -19,6 +19,8 @@
 
 - 檔案名稱：`Crawler.ipynb`
 
+  ![Diagram.png](Diagram.png)`
+
 - 從 <https://www.etf.com/> 取得官網後，在官網內能下載每日收盤價的ETF
 
   - FENY(已下載資料存於`FENY_Price_History_20190315.csv`)
@@ -30,7 +32,7 @@
 
 - 部分內容使用`Selenium.click()`下載 `csv` 檔。已將相關檔案一併附在 hw1 資料夾內，為了方便執行，便將部分下載指令屏蔽，直接開啟本地端檔案。若要實作真實運行狀況，請將相關隱藏程式碼開啟，並從環境變數中將下載路徑改為當前執行資料夾以方便讀檔。
 
-  ![image2.png](image1.png)
+  ![image1.png](image1.png)
 
   ![image2.png](image2.png)
 
@@ -65,7 +67,7 @@
     - yahoo finance 或 etf.com 網頁發生重大改版
     - 你沒接上網路
 - Q: 我能新增新的指標讓程式爬取嗎?
-  - A: 理論上，符合 1) yahoo finance有這支 2) 在2015/12/31前存在，你只要將其縮寫(ex: XLE) .append 到 etf_name_list 內，就能直接爬取。
+  - A: 理論上，符合 1) yahoo finance有這支 2) 在2015/12/31前存在，你只要將其縮寫(ex: XLE) `.append` 到 `etf_name_list` 內，就能直接爬取。
   - 若不在 yahoo finance上，可以自行補充爬取函式。
 - Q: 我能更改爬取的時間範圍嗎?
   - A: 可以。爬取時間目前設在2015/12/31~2019/3/15，可以從 `start_day`和`end_day`調整得到。
