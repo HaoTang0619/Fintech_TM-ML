@@ -1,0 +1,18 @@
+# pip3 install
+pip3 install google
+pip3 install git+https://github.com/abenassi/Google-Search-API
+pip3 install googletrans
+git clone https://github.com/Determined22/zh-NER-TF.git
+pip3 install tensorflow
+
+# Change of my_NER.py from main.py
+parser.add_argument('--text', type=str, default='請輸入文本', help='text for demo')
+
+while(1): => for i in range(1):
+demo_sent = input() => demo_sent = args.text
+
+print('PER: {}\nLOC: {}\nORG: {}'.format(set(list(PER)), LOC, ORG))
+=>
+with open("tmp.txt","w") as tmp:
+    tmp.write('PER: {}\nLOC: {}\nORG: {}'.format(set(list(PER)), LOC, ORG))
+
