@@ -14,17 +14,21 @@
 ### 資料欄位說明
 
 #### 1. ASSR_week_b2_rank (ASSR_month_b2_rank) ;  ASSR_week_b1_rank (ASSR_month_b1_rank)
-    * Both calculated by the formula (20) in Portfolio performance evaluation with generalized Sharpe ratios: Beyond the mean and variance (2009)
-    * b2 represents investors with logarithmic utility (closer to the real financial market)
-    * b1 represents investors with CARA utility
+    · Both calculated by the formula (20) in Portfolio performance evaluation with generalized Sharpe ratios: Beyond the mean and variance (2009)
+    · b2 represents investors with logarithmic utility (closer to the real financial market)
+    · b1 represents investors with CARA utility
+
+<br>    
 
 #### 2. Sharpe_Omega_week_rank (Sharpe_Omega_month_rank)
-    * Calculated by the formula (8) in Omega performance measure and portfolio insurance (2011)
+    · Calculated by the formula (8) in Omega performance measure and portfolio insurance (2011)
+
+<br>
 
 #### 3. Riskiness_week_uniform_rank (Riskiness_month_uniform_rank) ; Riskiness_week_fitpdf_rank (Riskiness_month_fitpdf_rank)
-    * Both calculated by the formula in A global index of riskiness (2013) P.494 Q(g)
-    * uniform means using uniform distribution to calculate the expected value
-    * fitpdf means using ETF's own probability density function to calculate the expected value
+    · Both calculated by the formula in A global index of riskiness (2013) P.494 Q(g)
+    · uniform means using uniform distribution to calculate the expected value
+    · fitpdf means using ETF's own probability density function to calculate the expected value
 
 ---
 
