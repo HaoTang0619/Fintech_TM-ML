@@ -132,19 +132,22 @@ def create_tree_and_save_it(tagged_article, crime_name, file):
 	return
 
 if __name__ == '__main__':
-	source_names = ['apple_daily','china_times', 'liberty_times', 'united_daily']
+	# source_names = ['apple_daily','china_times', 'liberty_times', 'united_daily']
+	source_names = ['liberty_times', 'united_daily']
 	# output_dataframe = Get_Data_From_Mysql(source_name[0],'all') #洗錢為例
-	crime_names = ['人口販運', '性剝削', '偽造貨幣', '殺人', '重傷害', '搶奪' , '勒索' , '海盜', '恐怖主義', '資恐', '非法販運武器', 
-					'贓物', '竊盜', '綁架', '拘禁', '妨礙自由', '環保犯罪', '偽造文書', '仿冒', '侵害商業秘密', '毒品犯運', '詐欺', 
-					'走私', '稅務犯罪', '組織犯罪', '證卷犯罪', '貪汙賄賂', '洗錢']
+	# crime_names = ['人口販運', '性剝削', '偽造貨幣', '殺人', '重傷害', '搶奪' , '勒索' , '海盜', '恐怖主義', '資恐', '非法販運武器', 
+	# 				'贓物', '竊盜', '綁架', '拘禁', '妨礙自由', '環保犯罪', '偽造文書', '仿冒', '侵害商業秘密', '毒品犯運', '詐欺', 
+	# 				'走私', '稅務犯罪', '組織犯罪', '證卷犯罪', '貪汙賄賂', '洗錢']
+	crime_names = ['"洗錢"']
 	#篩選句子內有犯罪名稱的句子
 	for crime_name in crime_names:
 		print('----- crime_name: ', crime_name, ' start -----')
-		fileName = crime_name + '.pkl'
+		fileName = crime_name + '_2.pkl'
 		f = open(fileName, 'wb')
 		for source_name in source_names:
 			print('----- source_name: ', source_name, ' start -----')
 			output_dataframe = Get_Data_From_Mysql(source_name, crime_name)
+			print(len(output_dataframe))
 			crime_idx = (output_dataframe['keyword'] == crime_name) #####這裡要改，(舉洗錢為例)
 			for tagged_article in output_dataframe[crime_idx]["tagged_article"]: #####可以像我先跑個幾筆([0:10])試一下，再跑全部，全部就是直接跑 >> for i in database
 				create_tree_and_save_it(tagged_article, crime_name, f)   #####這裡要改，(舉洗錢為例)
