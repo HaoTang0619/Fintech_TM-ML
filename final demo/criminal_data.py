@@ -13,7 +13,7 @@ def get_data_from_sql(table_name, keyword, keyword_type):
     db = pymysql.connect(host="18.217.252.187",port=3306, user="public_author",passwd="antimoneylaunderingisgood2",db="AML_News",charset='utf8')
     try:
         with db.cursor() as cursor:
-            sql0 = "SELECT * FROM `" + table_name + "` WHERE '" + keyword +"' LIKE CONCAT('%', `" + keyword_type + "`)"
+            sql0 = "SELECT * FROM `" + table_name + "` WHERE '" + keyword +"' LIKE CONCAT('%', `" + keyword_type + "`, '%')"
             cursor.execute(sql0)
             contents_list = cursor.fetchall()
         db.commit()
@@ -92,7 +92,7 @@ def get_popular_criminal_rank(keyword, num=0, force_update=False):
         return sorted_data.most_common()
 
 if __name__ == '__main__':
-    myCriminal = Criminal('彭立光')
+    myCriminal = Criminal('提勒森')
     print('in myCriminal.crime_news')
     for key, items in myCriminal.crime_news.items():
         print('====', key, '====')
