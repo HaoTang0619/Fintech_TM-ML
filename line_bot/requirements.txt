@@ -1,0 +1,7 @@
+line-bot-sdk
+flask
+Pillow
+imgurpython
+pymysql
+pandas
+numpy
